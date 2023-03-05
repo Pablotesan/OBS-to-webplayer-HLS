@@ -5,7 +5,7 @@ Stream video using OBS to a webpage. Includes SSL certbot integration.
 
 ---
 
-If you just want a simplier version or you don't pretend to run it under a domain name:
+If you just want a simpler version or you don't pretend to run it under a domain name:
 
 Check the localhost version:
 
