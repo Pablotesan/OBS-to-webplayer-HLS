@@ -7,9 +7,7 @@ Stream video using OBS to a webpage. Includes SSL certbot integration.
 
 If you just want a simpler version or you don't pretend to run it under a domain name:
 
-Check the localhost version:
-
-[OBS-to-local-webplayer-HLS](https://github.com/Pablotesan/OBS-to-local-webplayer-HLS)
+Check the localhost version: [OBS-to-local-webplayer-HLS](https://github.com/Pablotesan/OBS-to-local-webplayer-HLS)
 
 ---
 
