@@ -40,9 +40,30 @@ Steps:
 
       
 
-2. Configure OBS. 
-    - Steps [here](https://obsproject.com/forum/resources/how-to-do-hls-streaming-in-obs-open-broadcast-studio.945/).
+2. Configure OBS.
 
-    - Set as output folder, the "video" one.
+    - In "Settings/Advanced" in "Recording" section:
+
+        - Set Filename Formatting to: "stream".
+        - Set "Overwrite if file exists".
+
+          ![Advanced image](./aux-files/obs-advanced.jpg)
+
+
+    - In "Output" section, using Advanced mode:
+
+        - Set "Type" to "Custom Output FFMmpeg"
+        - Set "File path" to the "video" folder cloned with the repository.
+        - Set "Container Format" as "hsl".
+        - Configure "Muxer Settings" as you like. 
+
+          For example:
+
+          ```hls_flags=delete_segments hls_allow_cache=0 hls_list_size=10```
+
+          Will keep up to 10 fragments and remove older ones when new ones are genereated.
+
+
+          ![Advanced image](./aux-files/obs-recording.jpg)
 
 3. Go to "```https://<<your-domain>>```" and enjoy.
