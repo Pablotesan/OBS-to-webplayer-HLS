@@ -26,9 +26,14 @@ Steps:
 
         - On the first run:
 
-            - Create the ssl certificate running this command replacing "<\<your-domain\>>" with your domain:
+            - Create the ssl certificate:
 
-                ```docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d <<your-domain>>```
+                - Run this command replacing "<\<your-domain\>>" with your domain:
+
+                    ```docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d <<your-domain>>```
+                    
+                - If the "dry-run" is successful, you can generate the certificate with the same command (replacing "<\<your-domain\>>" with your domain) but without the dry-run option:
+                    ```docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d <<your-domain>>```
 
             - Uncomment the second "server" section in the "nginx-conf/stream.conf" file.
 
